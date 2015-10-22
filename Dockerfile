@@ -14,7 +14,7 @@ ONBUILD ADD ./ /opt/application
 ONBUILD WORKDIR /opt/application
 ONBUILD RUN npm install
 
-EXPOSE 3000
+EXPOSE 3001
 
 ENV NODE_PATH="/opt/application/lib" \
     NODE_CONFIG_DISABLE_FILE_WATCH="Y" \
