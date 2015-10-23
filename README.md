@@ -5,7 +5,7 @@ Demo Microservice Handling Shipments
 ## Installation
 
 ```console
-> git clone https://github.com/apiacademy/cardgame-srvc-arbiter.git
-> cd cardgame-srvc-arbiter
+> git clone https://github.com/apiacademy/shippinginc-customer-ms.git
+> cd shippinginc-shipments-ms
 > docker-compose up -d
 ```
