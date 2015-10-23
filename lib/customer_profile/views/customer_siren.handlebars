@@ -1,0 +1,25 @@
+{
+    "class" : "{{ title }}",
+    "properties" : {{{userString}}},
+
+    "entities" : [
+    {{#each entities}}
+        {
+        {{#if class}}"class" : ["{{class}}"],{{/if}}
+        "rel" : ["{{rel}}"],
+        "href" : "{{../base_url}}{{url}}"
+        }{{^last}},{{/last}}
+    {{/each}}
+    ],
+
+    "links" : [
+    {{#each affordances}}
+        {
+        {{#if class}}"class" : ["{{class}}"],{{/if}}
+        "rel" : ["{{rel}}"],
+        "href" : "{{../base_url}}{{url}}"
+        }{{^last}},{{/last}}
+
+    {{/each}}
+    ]
+}

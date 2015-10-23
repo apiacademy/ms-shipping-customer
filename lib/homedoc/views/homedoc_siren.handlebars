@@ -1,0 +1,14 @@
+{
+    "class" : ["{{ title }}"],
+
+    "links" : [
+    {{#each affordances}}
+        {
+        "class" : ["{{class}}"],
+        "rel" : ["{{../base_url}}{{rel}}"],
+        "href" : "{{../base_url}}{{url}}"
+        }{{^last}},{{/last}}
+
+    {{/each}}
+    ]
+}

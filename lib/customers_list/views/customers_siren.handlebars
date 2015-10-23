@@ -1,0 +1,20 @@
+{
+  "class" : ["{{ title }}"],
+
+  "entities": [
+    {{#each users}}
+        {
+            "class": ["customer"],
+            "rel": ["item"],
+            "href": "{{../base_url}}/users/{{uuid}}/profile"
+        }{{^last}},{{/last}}
+    {{/each}}
+  ],
+  "links": [
+    {{#each affordances}}
+        {
+          "rel": ["{{rel}}"], "href": "{{../base_url}}{{url}}"
+        }{{^last}},{{/last}}
+    {{/each}}
+    ]
+}

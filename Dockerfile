@@ -4,7 +4,7 @@ FROM irakli/nodejs:latest
 # ENV HOME /opt/application
 VOLUME /opt/application
 
-ENV REFRESHED_AT 2015-10-21-08_31
+ENV REFRESHED_AT 2015-10-22-15_31
 
 COPY runit /etc/service/node-app
 RUN chmod -R 755 /etc/service/node-app
