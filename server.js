@@ -2,6 +2,8 @@ var server = require('nodebootstrap-server');
 
 server.setup(function(runningApp) {
 
+  runningApp.disable("x-powered-by");
+
   runningApp.set('view engine', 'handlebars');
   runningApp.engine('handlebars', require('hbs').__express);
 
