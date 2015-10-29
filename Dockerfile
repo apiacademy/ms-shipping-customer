@@ -1,13 +1,14 @@
-FROM irakli/nodejs:latest
+# FROM irakli/nodejs:latest
+FROM irakli/alpine-nodejs-runit:latest
 
 # Set correct environment variables.
 # ENV HOME /opt/application
 VOLUME /opt/application
 
-ENV REFRESHED_AT 2015-10-22-15_31
+ENV REFRESHED_AT 2015-10-28-15_31
 
 COPY runit /etc/service/node-app
-RUN chmod -R 755 /etc/service/node-app
+RUN  chmod -R 755 /etc/service/node-app
 RUN npm install -g supervisor
 
 ONBUILD ADD ./ /opt/application
@@ -28,6 +29,5 @@ ENV NODE_PATH="/opt/application/lib" \
     NODE_HOT_RELOAD=1 \
     NODE_CONFIG_DIR="/opt/application/config" \
     NODE_LOG_DIR=/opt/application/logs"
-    
-# Clean up
-RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+CMD ["/sbin/runit_init"]
