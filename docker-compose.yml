@@ -1,6 +1,7 @@
 api: 
   build: .
+  container_name: shippinginc-customers
   volumes:
     - .:/opt/application  
   ports:
-   - "5001:3000"
+   - ":3000"
