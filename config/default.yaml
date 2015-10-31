@@ -1,6 +1,7 @@
 app:
   port: 3000
-  base_url: "docker:5001"
+# Only set base_url if you have to due to some proxy problems. Code should auto-discover it.
+# base_url: "docker:5001"
   media_type: "application/vnd.siren+json"
   pub_dir: "/public"
   csrf: false

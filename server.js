@@ -14,7 +14,4 @@ server.setup(function(runningApp) {
   // API endpoint attached to root route:
   runningApp.use('/', require('homedoc')); // attach to root route
 
-
-
-
 });

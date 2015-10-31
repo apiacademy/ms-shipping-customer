@@ -1,3 +1,4 @@
 app:
   #base_url: "http://api.froyo.io:5001"
-  base_url: "http://docker:5001"
+  #base_url: "http://docker:5001"
+  csrf: false
