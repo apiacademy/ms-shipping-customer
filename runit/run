@@ -9,4 +9,4 @@ umask 022
 
 # see: https://github.com/faisyl/alpine-runit/blob/master/example-service.runit
 
-cd /opt/application && /opt/application/bin/dev_start.sh
+cd /opt/application && ./bin/dev_start.sh
