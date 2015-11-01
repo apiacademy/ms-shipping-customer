@@ -1,4 +1,3 @@
-# FROM irakli/nodejs:latest
 FROM irakli/alpine-nodejs-runit:latest
 
 # Set correct environment variables.
