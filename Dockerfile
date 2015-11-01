@@ -1,10 +1,8 @@
 FROM irakli/alpine-nodejs-runit:latest
 
-# Set correct environment variables.
-# ENV HOME /opt/application
 VOLUME /opt/application
 
-ENV REFRESHED_AT 2015-10-28-15_31
+ENV REFRESHED_AT 2015-10-31-23_00
 
 COPY runit /etc/service/node-app
 RUN  chmod -R 755 /etc/service/node-app
